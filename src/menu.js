@@ -70,11 +70,6 @@ function menuLoad() {
 
     body.appendChild(squares);
 
-
-    // add all to section
-    body.appendChild(left);
-    body.appendChild(right);
-
     content.appendChild(body);
 }
 

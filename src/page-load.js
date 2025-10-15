@@ -9,6 +9,7 @@ function pageLoad() {
     hero.classList.add('hero');
 
     let heroImg = document.createElement('img');
+    heroImg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/1600px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg";
     heroImg.classList.add('hero-img');
 
     hero.appendChild(heroImg);
@@ -24,6 +25,8 @@ function pageLoad() {
     bread.classList.add('bread');
     let breadText = document.createElement('p');
     let breadImg = document.createElement('img');
+    breadImg.src = "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2019/04/b-1200x675.jpg";
+    breadImg.id = 'bread';
 
     // structure elements
     bread.appendChild(breadText);
@@ -34,6 +37,8 @@ function pageLoad() {
     wine.classList.add('wine');
     let wineText = document.createElement('p');
     let wineImg = document.createElement('img');
+    wineImg.src = "https://halleckvineyard.com/wp-content/uploads/2021/03/red-wine-feature.jpg";
+    wineImg.id = 'wine';
 
     // structure elements
     wine.appendChild(wineText);
@@ -44,6 +49,8 @@ function pageLoad() {
     menu.classList.add('menu');
     let menuText = document.createElement('p');
     let menuImg = document.createElement('img');
+    menuImg.src = "https://assets.epicurious.com/photos/57041b13f2e39cee31a5038c/4:3/w_1776,h_1332,c_limit/EP_03292016_persianpassover_210.jpg";
+    menuImg.id = 'menu';
 
     // structure elements
     menu.appendChild(menuText);
@@ -54,6 +61,8 @@ function pageLoad() {
     reservations.classList.add('reservations');
     let reservationsText = document.createElement('p');
     let reservationsImg = document.createElement('img');
+    reservationsImg.src = "https://cdn.shopify.com/s/files/1/0239/1477/4608/files/29426-DSC_5879-Edit.jpg?v=1711091974";
+    reservationsImg.id = 'reservations';
 
     // structure elements
     reservations.appendChild(reservationsText);
