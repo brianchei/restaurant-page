@@ -118,9 +118,18 @@ button {
 
 /* ** CONTENT ** */
 
+#content {
+  height: 300vh;
+  background-color: #64361d;
+}
+
 /* HERO */
 .hero {
+}
 
+.hero img {
+  width: 100%;
+  max-height: 80vh;
 }
 
 /* SQUARES */
@@ -128,57 +137,113 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-        'bread wine'
-        'menu reservations';
-
-    place-items: center;
-}
-
-.bread {
-    height: 40vh;
-    width: 50vh;
-    display: grid;
-    place-items: center;
-}
+    
+    padding: 6rem 0rem;
+    gap: 2rem;
+ }
 
 #bread {
-    width: 100%;
-    height: auto;
-}
-
-.wine {
+    position: relative;
+    justify-self: end;
+    width: 80%;
     height: 40vh;
-    width: 50vh;
-    display: grid;
-    place-items: center;
 }
 
 #wine {
-    width: 100%;
-    height: auto;
-}
-
-.squares .menu {
+    position: relative;
+    justify-self: start;
+    width: 80%;
     height: 40vh;
-    width: 50vh;
-    display: grid;
-    place-items: center;
 }
 
 #menu {
-    width: 100%;
-    height: auto;
-}
-
-.reservations {
+    position: relative;
+    justify-self: end;
+    width: 80%;
     height: 40vh;
-    width: 50vh;
-    display: grid;
-    place-items: center;
 }
 
 #reservations {
-    width: 100%;
-    height: auto;
+    position: relative;
+    justify-self: start;
+    width: 80%;
+    height: 40vh;
+}
+
+p {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 
+    -0.5px -0.5px 0 black,
+    0.5px -0.5px 0 black,
+    -0.5px 0.5px 0 black,
+    0.5px 0.5px 0 black;
+}
+
+p.left {
+  position: absolute;
+  left: 11%;
+  z-index: 1;
+}
+
+p.right {
+  position: absolute;
+  right: 11%;
+  z-index: 1;
+}
+
+/* REFERENCE CONTAINER */
+.reference-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 20rem;
+
+  margin: 0rem 10rem;
+  border-radius: 10rem;
+
+  background-color: #2c494a;
+}
+
+.form {
+  display: flex;
+
+  padding: 2rem;
+}
+
+input{
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 100%;
+
+  color: white;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    'left links logo';
+}
+
+.footer .left {
+  grid-area: left;
+}
+
+.links {
+  grid-area: links;
+}
+
+.logo {
+  grid-area: logo;
 }

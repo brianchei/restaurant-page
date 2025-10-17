@@ -22,8 +22,9 @@ function pageLoad() {
 
     // bread
     let bread = document.createElement('div');
-    bread.classList.add('bread');
     let breadText = document.createElement('p');
+    breadText.textContent = 'BREAD';
+    breadText.classList.add('left');
     let breadImg = document.createElement('img');
     breadImg.src = "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2019/04/b-1200x675.jpg";
     breadImg.id = 'bread';
@@ -34,8 +35,9 @@ function pageLoad() {
 
     // wine
     let wine = document.createElement('div');
-    wine.classList.add('wine');
     let wineText = document.createElement('p');
+    wineText.textContent = 'WINE';
+    wineText.classList.add('right');
     let wineImg = document.createElement('img');
     wineImg.src = "https://halleckvineyard.com/wp-content/uploads/2021/03/red-wine-feature.jpg";
     wineImg.id = 'wine';
@@ -46,8 +48,9 @@ function pageLoad() {
 
     // menu
     let menu = document.createElement('div');
-    menu.classList.add('menu');
     let menuText = document.createElement('p');
+    menuText.textContent = 'MENU';
+    menuText.classList.add('left');
     let menuImg = document.createElement('img');
     menuImg.src = "https://assets.epicurious.com/photos/57041b13f2e39cee31a5038c/4:3/w_1776,h_1332,c_limit/EP_03292016_persianpassover_210.jpg";
     menuImg.id = 'menu';
@@ -58,8 +61,9 @@ function pageLoad() {
 
     // reservations
     let reservations = document.createElement('div');
-    reservations.classList.add('reservations');
     let reservationsText = document.createElement('p');
+    reservationsText.textContent = 'RESERVATIONS';
+    reservationsText.classList.add('right');
     let reservationsImg = document.createElement('img');
     reservationsImg.src = "https://cdn.shopify.com/s/files/1/0239/1477/4608/files/29426-DSC_5879-Edit.jpg?v=1711091974";
     reservationsImg.id = 'reservations';
@@ -79,13 +83,40 @@ function pageLoad() {
     // reference container section
     let referenceContainer = document.createElement('div');
     referenceContainer.classList.add('reference-container');
+    let form = document.createElement('form');
     let formContainer = document.createElement('div');
     formContainer.classList.add('form-container');
-    let form = document.createElement('form');
+
+    // sign up header
+    let signUp = document.createElement('h2');
+    signUp.classList.add('sign-up');
+    signUp.textContent = 'RESERVE YOUR SEAT AT THE TABLE';
+
+    // email sign up form control
+    let formControlFirst = document.createElement('div');
+    formControlFirst.classList.add('form-control');
+
+    let labelFirst = document.createElement('label');
+    labelFirst.setAttribute('for', 'email');
+
+    let inputFirst = document.createElement('input');
+    inputFirst.setAttribute('type', 'email');
+    inputFirst.setAttribute('name', 'email');
+    inputFirst.id = 'email';
+    inputFirst.setAttribute('placeholder', 'johndoe@gmail.com');
+    inputFirst.required = true;
+
+    let spanFirst = document.createElement('span');
+
+    formControlFirst.appendChild(labelFirst);
+    formControlFirst.appendChild(inputFirst);
+    formControlFirst.appendChild(spanFirst);
 
     // structure elements
-    formContainer.appendChild(form);
-    referenceContainer.appendChild(formContainer);
+    formContainer.appendChild(signUp);
+    formContainer.appendChild(formControlFirst);
+    form.appendChild(formContainer);
+    referenceContainer.appendChild(form);
 
     // footer
     let footer = document.createElement('div');
