@@ -121,18 +121,97 @@ function pageLoad() {
     // footer
     let footer = document.createElement('div');
     footer.classList.add('footer');
+
+    // left
     let left = document.createElement('div');
     left.classList.add('left');
+
+    let title = document.createElement('h3');
+    title.textContent = 'THE UPPERROOM';
+
+    let subtitle = document.createElement('p');
+    subtitle.classList.add('subtitle');
+    subtitle.textContent = 'LAST SUPPER';
+
+    let socials = document.createElement('div');
+    socials.classList.add('socials');
+
+    let insta = document.createElement('img');
+    insta.classList.add('icon');
+    insta.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png';
+    let fb = document.createElement('img');
+    fb.classList.add('icon');
+    fb.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png';
+    let x = document.createElement('img');
+    x.classList.add('icon');
+    x.src = 'https://img.freepik.com/free-vector/twitter-new-2023-x-logo-white-background-vector_1017-45422.jpg?semt=ais_hybrid&w=740&q=80';
+    let tiktok = document.createElement('img');
+    tiktok.classList.add('icon');
+    tiktok.src = 'https://thumbs.dreamstime.com/b/tik-tok-icon-tiktok-logo-design-graphic-template-vector-illustration-211007983.jpg';
+    let copyright = document.createElement('p');
+    copyright.classList.add('copyright');
+    copyright.textContent = 'COPYRIGHT 2025';
+
+    // structure elements
+    socials.appendChild(insta);
+    socials.appendChild(fb);
+    socials.appendChild(x);
+    socials.appendChild(tiktok);
+
+    left.appendChild(title);
+    left.appendChild(subtitle);
+    left.appendChild(socials);
+    left.appendChild(copyright);
+    
+    
+    // links
     let links = document.createElement('div');
     links.classList.add('links');
+    let linkList = document.createElement('ul');
+    let link1 = document.createElement('li');
+    link1.textContent = 'menu';
+    let link2 = document.createElement('li');
+    link2.textContent = 'careers'
+    let link3 = document.createElement('li');
+    link3.textContent = 'locations';
+    let link4 = document.createElement('li');
+    link4.textContent = 'rewards';
+    let link5 = document.createElement('li');
+    link5.textContent = 'culture';
+    let link6 = document.createElement('li');
+    link6.textContent = 'contact';
+    let link7 = document.createElement('li');
+    link7.textContent = 'about us';
+    let link8 = document.createElement('li');
+    link8.textContent = 'gifts';
+
+    // structure elements
+    linkList.appendChild(link1);
+    linkList.appendChild(link2);
+    linkList.appendChild(link3);
+    linkList.appendChild(link4);
+    linkList.appendChild(link5);
+    linkList.appendChild(link6);
+    linkList.appendChild(link7);
+    linkList.appendChild(link8);
+
+    links.appendChild(linkList);
+
+    // logo
     let logo = document.createElement('div');
     logo.classList.add('logo');
+    let logoImg = document.createElement('img');
+    logoImg.classList.add('logo-img');
+    logoImg.src = 'https://pbs.twimg.com/profile_images/1009856713132920832/lfeb9wDH_400x400.jpg';
+
+    logo.appendChild(logoImg);
 
     // structure elements
     footer.appendChild(left);
     footer.appendChild(links);
     footer.appendChild(logo);
 
+    referenceContainer.appendChild(footer);
     content.appendChild(referenceContainer);
 }
 

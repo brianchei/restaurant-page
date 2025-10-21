@@ -119,6 +119,9 @@ button {
 /* ** CONTENT ** */
 
 #content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 300vh;
   background-color: #64361d;
 }
@@ -171,7 +174,7 @@ button {
 }
 
 p {
-  font-size: 4rem;
+  font-size: 3rem;
   color: white;
   text-shadow: 
     -0.5px -0.5px 0 black,
@@ -202,6 +205,10 @@ h2 {
   font-size: 2rem;
 }
 
+.sign-up {
+  padding: 2rem;
+}
+
 .form-container {
   display: flex;
   justify-content: space-around;
@@ -209,19 +216,23 @@ h2 {
 
   height: 20rem;
 
-  margin: 0rem 10rem;
   border-radius: 10rem;
 
+  color: white;
   background-color: #2c494a;
 }
 
-.form {
-  display: flex;
-
+.form-control {
   padding: 2rem;
 }
 
-input{
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
   border-radius: 0.5rem;
   height: 3rem;
   width: 100%;
@@ -229,21 +240,82 @@ input{
   color: white;
 }
 
+/* footer */
+
 .footer {
+  height: 60vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 
     'left links logo';
+
+  padding: 2rem;
+
+  background-color: #cdb085;
+  margin-top: 5rem;
 }
 
-.footer .left {
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   grid-area: left;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+}
+
+.socials {
+  display: flex;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+  
+.icon {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+}
+
+.copyright {
+  font-size: 1rem;
+  text-shadow: none;
 }
 
 .links {
   grid-area: links;
 }
 
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  gap: 3rem 0rem;
+  padding: 1rem;
+
+  list-style-type: none;
+}
+
+li {
+  justify-self: start;
+  font-size: 1.25rem;
+
+  color: white;
+}
+
 .logo {
+  display: flex;
+  justify-content: center;
+  height: 80%;
   grid-area: logo;
+}
+
+.logo-img {
+  height: 100%;
 }
