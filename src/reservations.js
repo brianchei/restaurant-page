@@ -13,18 +13,22 @@ function reservationsLoad() {
     left.classList.add('left');
 
     let leftImg = document.createElement('img');
+    leftImg.src = 'https://images.pexels.com/photos/18285170/pexels-photo-18285170/free-photo-of-table-set-for-dinner-in-a-restaurant.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
 
     let leftTop = document.createElement('div');
     leftTop.classList.add('top');
     let leftTopHeading = document.createElement('h1');
     leftTopHeading.classList.add('heading')
+    leftTopHeading.textContent = 'RESERVATIONS';
 
     let leftBottom = document.createElement('div');
     leftBottom.classList.add('bottom');
     let leftBottomHeading = document.createElement('h2');
     leftBottomHeading.classList.add('heading2');
+    leftBottomHeading.textContent = 'SECURE YOUR SPOT AT THE TABLE';
     let leftBottomCredit = document.createElement('p');
     leftBottomCredit.classList.add('credit');
+    leftBottomCredit.textContent = 'CREDIT';
 
     left.appendChild(leftImg);
     left.appendChild(leftTop);
@@ -32,16 +36,17 @@ function reservationsLoad() {
 
     // right
     let right = document.createElement('div');
-    right.classList.add('right');
+    right.classList.add('form-right');
 
     let form = document.createElement('form');
     let formContainer = document.createElement('div');
-    formContainer.classList.add('form-container');
+    formContainer.classList.add('form-container-reserve');
 
     let rightTop = document.createElement('div');
     rightTop.classList.add('top');
     let rightTopHeading = document.createElement('h2');
     rightTopHeading.classList.add('heading2');
+    rightTopHeading.textContent = 'RESERVE YOUR SPOT';
 
     let rightBottom = document.createElement('div');
     rightBottom.classList.add('bottom');
@@ -60,10 +65,11 @@ function reservationsLoad() {
     inputFirst.setAttribute('type', 'text');
     inputFirst.setAttribute('name', 'first-name');
     inputFirst.id = 'first-name';
-    inputFirst.setAttribute('placeholder', 'John');
+//    inputFirst.setAttribute('placeholder', 'John');
     inputFirst.required = true;
 
     let spanFirst = document.createElement('span');
+    spanFirst.textContent = 'FIRST NAME';
 
     formControlFirst.appendChild(labelFirst);
     formControlFirst.appendChild(inputFirst);
@@ -81,10 +87,11 @@ function reservationsLoad() {
     inputLast.setAttribute('type', 'text');
     inputLast.setAttribute('name', 'last-name');
     inputLast.id = 'last-name';
-    inputLast.setAttribute('placeholder', 'Doe');
+//    inputLast.setAttribute('placeholder', 'Doe');
     inputLast.required = true;
 
     let spanLast = document.createElement('span');
+    spanLast.textContent = 'LAST NAME';
 
     formControlLast.appendChild(labelLast);
     formControlLast.appendChild(inputLast);
@@ -102,10 +109,11 @@ function reservationsLoad() {
     inputEmail.setAttribute('type', 'email');
     inputEmail.setAttribute('name', 'email');
     inputEmail.id = 'email';
-    inputEmail.setAttribute('placeholder', 'johndoe@gmail.com');
+//    inputEmail.setAttribute('placeholder', 'johndoe@gmail.com');
     inputEmail.required = true;
 
     let spanEmail = document.createElement('span');
+    spanEmail.textContent = 'EMAIL';
 
     formControlEmail.appendChild(labelEmail);
     formControlEmail.appendChild(inputEmail);
@@ -123,10 +131,11 @@ function reservationsLoad() {
     inputTel.setAttribute('type', 'tel');
     inputTel.setAttribute('name', 'tel');
     inputTel.id = 'tel';
-    inputTel.setAttribute('placeholder', '123-456-7890');
+//    inputTel.setAttribute('placeholder', '123-456-7890');
     inputTel.required = true;
 
     let spanTel = document.createElement('span');
+    spanTel.textContent = 'PHONE';
 
     formControlTel.appendChild(labelTel);
     formControlTel.appendChild(inputTel);
@@ -144,10 +153,11 @@ function reservationsLoad() {
     inputDate.setAttribute('type', 'tel');
     inputDate.setAttribute('name', 'date');
     inputDate.id = 'date';
-    inputDate.setAttribute('placeholder', '09/21/2025');
+//    inputDate.setAttribute('placeholder', '09/21/2025');
     inputDate.required = true;
 
     let spanDate = document.createElement('span');
+    spanDate.textContent = 'DATE';
 
     formControlDate.appendChild(labelDate);
     formControlDate.appendChild(inputDate);
@@ -165,10 +175,11 @@ function reservationsLoad() {
     inputParty.setAttribute('type', 'tel');
     inputParty.setAttribute('name', 'party');
     inputParty.id = 'party';
-    inputParty.setAttribute('placeholder', '6');
+//    inputParty.setAttribute('placeholder', '6');
     inputParty.required = true;
 
     let spanParty = document.createElement('span');
+    spanParty.textContent = 'PARTY SIZE';
 
     formControlParty.appendChild(labelParty);
     formControlParty.appendChild(inputParty);
@@ -181,10 +192,13 @@ function reservationsLoad() {
 
     let buttonReserve = document.createElement('button');
     buttonReserve.classList.add('reserve');
+    buttonReserve.textContent = 'RESERVE';
 
     formControlReserve.appendChild(buttonReserve);
 
     // add all to section
+    rightTop.appendChild(rightTopHeading);
+    
     rightBottom.appendChild(formControlFirst);
     rightBottom.appendChild(formControlLast);
     rightBottom.appendChild(formControlEmail);

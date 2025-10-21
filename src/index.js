@@ -15,10 +15,11 @@ function screenController() {
 
     // initialize dom elements
     let content = document.querySelector('#content');
-    let bread = document.querySelector('.bread');
-    let wine = document.querySelector('.wine');
+    let bread = document.querySelector('.break-bread');
+    let wine = document.querySelector('.drink-wine');
     let menu = document.querySelector('.menu');
-    let reservations = document.querySelector('.reservations');
+    let reservations = document.querySelector('.reserve');
+    let home = document.querySelector('.home');
 
     function updateScreen() {
         // clear content
@@ -32,11 +33,11 @@ function screenController() {
                 pageLoad();
                 console.log(currentPage);
                 break;
-            case 'bread':
+            case 'break-bread':
                 breadLoad();
                 console.log(currentPage);
                 break;
-            case 'wine':
+            case 'drink-wine':
                 wineLoad();
                 console.log(currentPage);
                 break;
@@ -44,7 +45,7 @@ function screenController() {
                 menuLoad();
                 console.log(currentPage);
                 break;
-            case 'reservations':
+            case 'reserve':
                 reservationsLoad();
                 console.log(currentPage);
                 break;
@@ -64,7 +65,9 @@ function screenController() {
     }
 
     // add event listeners
+    home.addEventListener('click', clickHandler);
     bread.addEventListener('click', clickHandler);
+    console.log('event listener added');
     wine.addEventListener('click', clickHandler);
     menu.addEventListener('click', clickHandler);
     reservations.addEventListener('click', clickHandler);

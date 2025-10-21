@@ -58,6 +58,8 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* ** page-load.js ** */
+
 /* ** HEADER ** */
 
 header {
@@ -74,7 +76,7 @@ nav {
     padding: 1rem 2rem;
 }
 
-button.menu {
+.menu {
     grid-area: menu;
     justify-self: start;
 
@@ -122,7 +124,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 300vh;
   background-color: #64361d;
 }
 
@@ -235,7 +236,6 @@ form {
 input {
   border-radius: 0.5rem;
   height: 3rem;
-  width: 100%;
 
   color: white;
 }
@@ -255,11 +255,13 @@ input {
   margin-top: 5rem;
 }
 
-.left {
+.footer > .left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   grid-area: left;
+
+  background-color: #cdb085;
 }
 
 h3 {
@@ -318,4 +320,198 @@ li {
 
 .logo-img {
   height: 100%;
+}
+
+
+/* ** bread.js/wine.js ** */
+.header {
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+
+  color: white;
+  background-color: #cdb085;
+}
+
+.heading-wine {
+  font-size: 4rem;
+
+  color: white;
+  background-color: #a3462a;
+}
+
+.body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  grid-template-areas: 
+    'left right';
+}
+
+div.left {
+  height: 100%;
+  grid-area: left;
+  background-color: #64361d;
+}
+
+.left-img {
+  height: 100%;
+}
+
+div.right {
+  grid-area: right;
+
+  background-color: #64361d;
+
+  padding: 2rem;
+}
+
+.heading2 {
+  font-size: 3rem;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+
+/* ** reservations.js ** */
+.left>img {
+  height: 100%;
+}
+
+.right>form {
+  justify-content: start;
+}
+
+.form-right {
+  display: flex;
+  align-items: center;
+
+  padding-left: 8rem;
+}
+
+.form-container-reserve {
+  color: white;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.form-control input {
+  border-color: rgba(94, 80, 63, 0.7);
+  border-radius: 4px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-style: solid;
+
+  color: var(--primary-font-color);
+  background-color: var(--primary-background-color);
+}
+
+input::placeholder {
+  color: rgb(255, 255, 255, 0.5);
+}
+
+.form-control {
+  position: relative;
+
+  width: 50%;
+  padding: 32px 0px;
+
+  color: white;
+}
+
+.form-control span {
+  position: absolute;
+  left: 4px;
+  bottom: 36px;
+  z-index: 0;
+
+  font-family: var(--extra-font-stack);
+  font-weight: bolder;
+
+  color: var(--primary-font-color);
+  opacity: 0.7;
+
+  transition: bottom 250ms, font-size 250ms, opacity 250ms;
+  pointer-events: none;
+}
+
+.form-control input:focus + span,
+.form-control input:valid + span,
+.form-control input:not(:placeholder-shown) + span {
+  bottom: 64px;
+  font-size: 0.85em;
+  opacity: 0.9;
+}
+
+.form-control input:focus {
+  border-color: #B3EBF2;
+  box-shadow: 4px 4px #0A0908;
+}
+
+.form-control input:user-invalid {
+  border-color: #E63946;
+}
+
+.form-control input:user-valid {
+  border-color: #38b000;
+}
+
+.form-control button {
+  width: 224px;
+  height: 48px;
+
+  border-radius: 4px;
+
+  font-size: 1rem;
+}
+
+
+/* ** menu.js ** */
+.heading-menu {
+  text-align: center;
+  font-size: 4rem;
+
+  color: white;
+  background-color: black;
+}
+
+.body-menu {
+  display: flex;
+}
+
+.bread>img,
+.wine>img,
+.lamb>img,
+.goat>img {
+  height: 100%;
+}
+
+.bread>p,
+.wine>p,
+.lamb>p,
+.goat>p {
+  position: absolute;
+}
+
+.bread,
+.wine,
+.lamb,
+.goat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.squares-menu {
+  padding: 2rem;
 }
